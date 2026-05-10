@@ -6,7 +6,7 @@
     <meta name="description" content="Portfolio of Vishal Rajesh Bhutekar - Android Developer and Computer Science student at Government College of Engineering, Chhatrapati Sambhajinagar. Specialized in native Android app development with Java/Kotlin.">
     <meta name="keywords" content="Android Developer, Java, Kotlin, Mobile App Development, Vishal Bhutekar, Codeforces, Firebase, Android Studio, Competitive Programming">
     <meta name="author" content="Vishal Rajesh Bhutekar">
-    <meta name="theme-color" content="#2563eb">
+    <meta name="theme-color" content="#FAFAF9">
     <meta name="robots" content="index, follow">
     <meta property="og:title" content="Vishal Bhutekar - Portfolio">
     <meta property="og:description" content="Explore the portfolio of Vishal Rajesh Bhutekar, an Android Developer passionate about creating innovative applications. Contact: vishalbhutekar33772@gmail.com">
@@ -17,19 +17,11 @@
     <!-- Favicon -->
     <link rel="icon" type="image/webp" href="images/favicon.webp">
     <!-- Preload critical resources -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" as="style">
-    <link rel="preload" href="images/profile-new.png" as="image">
     <link rel="preload" href="style.css" as="style">
     <link rel="preload" href="main.js" as="script">
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <!-- AOS Animation Library -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
@@ -73,10 +65,9 @@
 
     <!-- Hero Section -->
     <section class="hero" id="home">
-        <div class="hero-content" data-aos="fade-up">
+        <div class="hero-content">
             <div class="hero-text">
                 <div class="hero-greeting">
-                    <span class="wave">👋</span>
                     <span class="greeting-text">Hello, I'm</span>
                 </div>
                 <h1 class="hero-name">
@@ -84,9 +75,7 @@
                     <span class="last-name">Bhutekar</span>
                 </h1>
                 <div class="typing-container">
-                    <span class="typing-label">I'm a</span>
                     <span class="typed-text"></span>
-                    <span class="cursor"></span>
                 </div>
                 <p class="hero-description">
                     Crafting innovative mobile experiences with cutting-edge Android development. 
@@ -139,22 +128,14 @@
                     </div>
                 </div>
             </div>
-            <div class="hero-visual" data-aos="fade-left">
-                <div class="profile-container">
-                    <div class="profile-ring"></div>
-                    <div class="profile-dots"></div>
-                    <img src="images/profile-new.png" alt="Vishal Bhutekar - Android Developer" class="hero-img" loading="eager">
-                </div>
-            </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-   <!-- Only the Projects Section is shown for brevity; replace this in your existing HTML -->
 <section id="projects" class="section">
-    <h2 data-aos="fade-up">Projects</h2>
+    <h2>Projects</h2>
     <div class="project-grid">
-        <div class="project-card" data-aos="flip-up">
+        <div class="project-card">
             <img src="images/agewell.jpg" alt="Age well - Elder care App" loading="lazy" data-src="images/agewell.jpg" data-alt="Age well - Elder care App" class="project-image" onclick="openImageModal(this)">
             <div class="project-info">
                 <h3>Age well - Elder care App</h3>
@@ -166,7 +147,7 @@
                 </div>
             </div>
         </div>
-        <div class="project-card" data-aos="flip-up" data-aos-delay="50">
+        <div class="project-card">
             <img src="images/SGGS.jpg" alt="SGGSIE&T - Paperless College App" loading="lazy" data-src="images/SGGS.jpg" data-alt="SGGSIE&T - Paperless College App" class="project-image" onclick="openImageModal(this)">
             <div class="project-info">
                 <h3>SGGSIE&T - Paperless College App</h3>
@@ -179,7 +160,7 @@
                 </div>
             </div>
         </div>
-        <div class="project-card" data-aos="flip-up" data-aos-delay="100">
+        <div class="project-card">
             <img src="images/carbonview.jpg" alt="CARBON VIEW - Carbon Footprint Tracker" loading="lazy" data-src="images/carbonview.jpg" data-alt="CARBON VIEW - Carbon Footprint Tracker" class="project-image" onclick="openImageModal(this)">
             <div class="project-info">
                 <h3>CARBON VIEW - Carbon Footprint Tracker</h3>
@@ -191,7 +172,7 @@
                 </div>
             </div>
         </div>
-        <div class="project-card" data-aos="flip-up" data-aos-delay="150">
+        <div class="project-card">
             <img src="images/gecaresults.png" alt="Geca Results" loading="lazy" data-src="images/gecaresults.png" data-alt="Geca Results" class="project-image" onclick="openImageModal(this)">
             <div class="project-info">
                 <h3>Geca Results</h3>
@@ -202,7 +183,7 @@
                 </div>
             </div>
         </div>
-        <div class="project-card" data-aos="flip-up" data-aos-delay="200">
+        <div class="project-card">
             <img src="images/shetkarimitra.jpg" alt="Shetkari Mitra – Snakebite Safety & Help App" loading="lazy" data-src="images/shetkarimitra.jpg" data-alt="Shetkari Mitra – Snakebite Safety & Help App" class="project-image" onclick="openImageModal(this)">
             <div class="project-info">
                 <h3>Shetkari Mitra – Snakebite Safety & Help App</h3>
@@ -219,10 +200,10 @@
 
     <!-- Achievements Section -->
     <section id="achievements" class="section">
-        <h2 data-aos="fade-up">Achievements & Recognition</h2>
+        <h2>Achievements & Recognition</h2>
         <div class="achievements-grid">
             <!-- Innovo Hackathon Achievement -->
-            <div class="achievement-card" data-aos="fade-up">
+            <div class="achievement-card">
                 <img src="images/ssgmce.jpg" 
                      alt="Innovo Hackathon 2024" 
                      loading="lazy"
@@ -238,7 +219,7 @@
             </div>
 
             <!-- PRMIT Project Competition -->
-            <div class="achievement-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="achievement-card">
                 <div class="achievement-image" onclick="openCertificateModal(this)">
                     <img src="images/amaravatihack.jpg" 
                          alt="National Level Project Competition" 
@@ -256,7 +237,7 @@
             </div>
 
             <!-- Wings Hackathon -->
-            <div class="achievement-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="achievement-card">
                 <div class="achievement-image" onclick="openCertificateModal(this)">
                     <img src="images/gecahack.jpg" 
                          alt="Wings Hackathon GECA" 
@@ -277,8 +258,8 @@
 
     <!-- About Section -->
     <section id="about" class="section">
-    <h2 data-aos="fade-up">About Me</h2>
-    <div class="about-container" data-aos="fade-up">
+    <h2>About Me</h2>
+    <div class="about-container">
         <div class="about-image-wrapper">
             <img src="images/picofme.jpg" alt="Vishal Rajesh Bhutekar" loading="lazy">
         </div>
@@ -292,7 +273,7 @@
                 <div class="education-timeline">
                     <h4><i class="fas fa-graduation-cap"></i> Education</h4>
                     <div class="education-items">
-                        <div class="education-item" data-aos="fade-up">
+                        <div class="education-item">
                             <div class="education-header">
                                 <h5>Bachelor of Technology - Computer Science and Engineering</h5>
                                 <span class="education-date">07/2024 - 06/2027 (Pursuing)</span>
@@ -301,7 +282,7 @@
                             <p class="education-score">SGPA: 8.67</p>
                         </div>
 
-                        <div class="education-item" data-aos="fade-up">
+                        <div class="education-item">
                             <div class="education-header">
                                 <h5>Diploma - Computer Engineering</h5>
                                 <span class="education-date">06/2021 - 06/2024 (Completed)</span>
@@ -318,9 +299,9 @@
 
     <!-- Beyond Code Section -->
     <section id="beyond-code" class="section">
-        <h2 data-aos="fade-up">Beyond Code</h2>
+        <h2>Beyond Code</h2>
         <div class="beyond-code-container">
-            <div class="premium-hobbies-card" data-aos="fade-up">
+            <div class="premium-hobbies-card">
                 <div class="hobbies-header">
                     <div class="header-content">
                         <h3>Unexplored Vishal</h3>
@@ -381,11 +362,11 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="section">
-        <h2 data-aos="fade-up">Professional Experience</h2>
+    <section id="experience" class="section">
+        <h2>Professional Experience</h2>
         <div class="experience-timeline">
             <!-- Current Internship -->
-            <div class="experience-card current" data-aos="fade-up">
+            <div class="experience-card current">
                 <div class="experience-badge">Current</div>
                 <div class="experience-header">
                     <div class="company-logo">
@@ -425,7 +406,7 @@
 
             <!-- C-CuBe Role -->
             <!-- C-CuBe Role -->
-            <div class="experience-card" data-aos="fade-up" data-aos-delay="50">
+            <div class="experience-card">
                 <div class="experience-header">
                     <div class="company-logo">
                         <i class="fas fa-cube"></i>
@@ -454,7 +435,7 @@
             </div>
 
             <!-- Internship -->
-            <div class="experience-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="experience-card">
                 <div class="experience-header">
                     <div class="company-logo">
                         <i class="fas fa-building"></i>
@@ -486,9 +467,9 @@
 
     <!-- Skills Section -->
     <section id="skills" class="section">
-    <h2 data-aos="fade-up">Technical Skills</h2>
+    <h2>Technical Skills</h2>
     <div class="skills-container">
-        <div class="skills-wrapper" data-aos="fade-up">
+        <div class="skills-wrapper">
             <div class="skill-category">
                 <h3><i class="fas fa-mobile-alt"></i> Mobile Development</h3>
                 <div class="skills-list">
@@ -534,9 +515,9 @@
 
     <!-- GitHub Stats Section -->
     <section id="coding-stats" class="section">
-        <h2 data-aos="fade-up">GitHub Activity</h2>
+        <h2>GitHub Activity</h2>
         <div class="stats-container">
-            <div class="stats-card" data-aos="fade-up">
+            <div class="stats-card">
                 <div class="stats-header">
                     <i class="fab fa-github"></i>
                     <h3>Contribution Stats</h3>
@@ -554,9 +535,9 @@
 
     <!-- Services Section -->
     <section id="services" class="section">
-        <h2 data-aos="fade-up">Services</h2>
+        <h2>Services</h2>
         <div class="services-grid">
-            <div class="service-item" data-aos="flip-up">
+            <div class="service-item">
                 <i class="fab fa-android"></i>
                 <h3>Android App Development</h3>
                 <p>Building native Android applications with Java/Kotlin, focusing on performance and user experience.</p>
@@ -567,7 +548,7 @@
                 </ul>
             </div>
 
-            <div class="service-item" data-aos="flip-up" data-aos-delay="50">
+            <div class="service-item">
                 <i class="fas fa-palette"></i>
                 <h3>UI/UX Design</h3>
                 <p>Creating intuitive and engaging user interfaces with modern design principles.</p>
@@ -578,7 +559,7 @@
                 </ul>
             </div>
 
-            <div class="service-item" data-aos="flip-up" data-aos-delay="100">
+            <div class="service-item">
                 <i class="fas fa-code-branch"></i>
                 <h3>App Deployment</h3>
                 <p>Handling the complete deployment process from testing to Play Store publication.</p>
@@ -589,7 +570,7 @@
                 </ul>
             </div>
 
-            <div class="service-item" data-aos="flip-up" data-aos-delay="150">
+            <div class="service-item">
                 <i class="fas fa-chalkboard-teacher"></i>
                 <h3>Android Development Mentoring</h3>
                 <p>Helping aspiring developers learn Android app development through practical guidance.</p>
@@ -604,10 +585,10 @@
 
     <!-- Certifications Section -->
     <section id="certifications" class="section">
-    <h2 data-aos="fade-up">Certifications</h2>
+    <h2>Certifications</h2>
     <div class="certifications-grid">
         <!-- Data Analytics Certificate -->
-        <div class="certification-card" data-aos="fade-up">
+        <div class="certification-card">
             <div class="certification-content">
                 <div class="cert-icon">
                     <i class="fas fa-chart-line"></i>
@@ -632,7 +613,7 @@
         </div>
 
         <!-- Software Engineering Certificate -->
-        <div class="certification-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="certification-card">
             <div class="certification-content">
                 <div class="cert-icon">
                     <i class="fas fa-code"></i>
@@ -657,7 +638,7 @@
         </div>
 
         <!-- Data Visualization Certificate -->
-        <div class="certification-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="certification-card">
             <div class="certification-content">
                 <div class="cert-icon">
                     <i class="fas fa-chart-bar"></i>
@@ -685,13 +666,13 @@
 
     <!-- Contact Section -->
     <section id="contact" class="section">
-    <h2 data-aos="fade-up">Let's Connect</h2>
+    <h2>Let's Connect</h2>
     <div class="contact-container">
-        <div class="contact-intro" data-aos="fade-up">
+        <div class="contact-intro">
             <p>I'm always excited to connect with fellow developers, potential collaborators, or anyone interested in my work. Feel free to reach out through any of the following channels!</p>
         </div>
         <div class="contact-grid">
-            <div class="contact-card" data-aos="fade-up">
+            <div class="contact-card">
                 <div class="card-icon email-icon">
                     <i class="fas fa-envelope"></i>
                 </div>
@@ -704,7 +685,7 @@
                     </a>
                 </div>
             </div>
-            <div class="contact-card" data-aos="fade-up" data-aos-delay="50">
+            <div class="contact-card">
                 <div class="card-icon whatsapp-icon">
                     <i class="fab fa-whatsapp"></i>
                 </div>
@@ -717,7 +698,7 @@
                     </a>
                 </div>
             </div>
-            <div class="contact-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="contact-card">
                 <div class="card-icon location-icon">
                     <i class="fas fa-map-marker-alt"></i>
                 </div>
@@ -761,8 +742,6 @@
 </footer>
 
     <!-- Scripts -->
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="main.js"></script>
 </body>
 </html>
