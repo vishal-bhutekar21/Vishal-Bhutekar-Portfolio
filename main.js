@@ -25,6 +25,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     themeToggle?.addEventListener('click', () => {
         const nextTheme = body.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        // Flash animation
+        body.classList.add('theme-transitioning');
+        setTimeout(() => body.classList.remove('theme-transitioning'), 420);
         body.setAttribute('data-theme', nextTheme);
         localStorage.setItem('theme', nextTheme);
         updateThemeIcon(nextTheme);
@@ -47,6 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (event.key === 'Escape') {
             closeMenu();
             closeOpenModal();
+            closeAchievementLightbox();
         }
     });
 
@@ -175,3 +179,82 @@ function closeOpenModal() {
     document.body.classList.remove('no-scroll');
     setTimeout(() => modal.remove(), 150);
 }
+
+/* ── Achievement photo lightbox ── */
+function openAchievementLightbox(src, alt) {
+    const lb = document.getElementById('achievementLightbox');
+    const img = document.getElementById('achievementLightboxImg');
+    if (!lb || !img) return;
+    img.src = src;
+    img.alt = alt || '';
+    lb.classList.add('is-open');
+    document.body.classList.add('no-scroll');
+}
+
+function closeAchievementLightbox() {
+    const lb = document.getElementById('achievementLightbox');
+    if (!lb) return;
+    lb.classList.remove('is-open');
+    document.body.classList.remove('no-scroll');
+    // Reset after close so next open animates fresh
+    const img = document.getElementById('achievementLightboxImg');
+    setTimeout(() => { if (img) img.src = ''; }, 250);
+}
+
+/* ── MonkeyType live stats ── */
+(function fetchMonkeyTypeStats() {
+    const els = {
+        best:  document.getElementById('mt-best'),
+        avg:   document.getElementById('mt-avg'),
+        acc:   document.getElementById('mt-acc'),
+        tests: document.getElementById('mt-tests'),
+    };
+    if (!els.best) return; // section not on page
+
+    // Show loading pulse
+    Object.values(els).forEach(el => el && el.classList.add('loading'));
+
+    // MonkeyType public API — no auth needed for public profiles
+    fetch('https://api.monkeytype.com/users/vishal-bhutekar/profile', {
+        headers: { 'Accept': 'application/json' }
+    })
+    .then(r => r.ok ? r.json() : Promise.reject(r.status))
+    .then(data => {
+        const d = data?.data || data;
+        const pb = d?.personalBests;
+
+        // Best 15-sec WPM
+        if (els.best && pb?.time?.['15']) {
+            const best15 = pb.time['15'].reduce((m, r) => r.wpm > m ? r.wpm : m, 0);
+            els.best.textContent = Math.round(best15);
+        }
+
+        // Avg 60-sec WPM
+        if (els.avg && pb?.time?.['60']) {
+            const avg60 = pb.time['60'].reduce((sum, r) => sum + r.wpm, 0) / pb.time['60'].length;
+            els.avg.textContent = Math.round(avg60);
+        }
+
+        // Accuracy (from 60s tests)
+        if (els.acc && pb?.time?.['60']) {
+            const avgAcc = pb.time['60'].reduce((sum, r) => sum + r.acc, 0) / pb.time['60'].length;
+            els.acc.textContent = Math.round(avgAcc) + '%';
+        }
+
+        // Total tests
+        if (els.tests && d?.typingStats?.completedTests != null) {
+            els.tests.textContent = d.typingStats.completedTests.toLocaleString();
+        }
+
+        Object.values(els).forEach(el => el && el.classList.remove('loading'));
+    })
+    .catch(() => {
+        // API unavailable — show graceful fallback
+        Object.values(els).forEach(el => {
+            if (!el) return;
+            el.classList.remove('loading');
+            el.textContent = '—';
+            el.title = 'Visit monkeytype.com/profile/vishal-bhutekar for live stats';
+        });
+    });
+})();
